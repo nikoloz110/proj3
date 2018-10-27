@@ -1,0 +1,48 @@
+{{> head}}
+
+<body>
+  <a href="/" id="home">&larr; Back</a>
+  <div id="errorContainer">
+    <span id="error">{{error}}</span>
+  </div>
+  <div id="wrapperCarInfo">
+    <section id="car">
+      <h1>Car</h1>
+      <form action="/car/info" id="carData" method="POST">
+        <label>Make:<input name="make" type="text" value={{make}}></label>
+        <label>Model:<input name="model" type="text" value={{model}}></label>
+        <label>VIN:<input name="VIN" type="number" value={{VIN}} placeholder="required" required></label>
+        <label>Plate Number:<input name="licensePlateNumber" type="number" value={{licensePlateNumber}} placeholder="required"
+            required></label>
+        <label>Color:<input name="color" type="text" value={{color}}></label>
+        <input name="carID" type="number" value={{carID}} class="hidden">
+        <input type="text" name="operation" value="updateCar">
+        <button type="submit">Update Car</button>
+      </form>
+      <hr>
+      <h1>Previous Owners</h1>
+      {{#each prevOwnersObjects}}
+      <span class="prevOwner">{{name}} {{surname}}</span><br>
+      {{/each}}
+    </section>
+    <section id="person">
+      <h1>Current Owner</h1>
+      <span class="owner">{{name}} {{surname}}</span><br>
+      <p>{{IDNumber}}</p>
+      <p class="hidden">{{personID}}</p>
+      <hr>
+      <form action="" method="POST">
+        <label>Name:<input name="name" type="text"></label>
+        <label>Surname: <input name="surname" type="text"></label>
+        <span id="or">OR</span>
+        <label>ID Number: <input name="IDNumber" type="number"></label>
+        <input name="operation" type="text" value="updatePerson">
+        <input name="carID" type="number" value={{carID}} class="hidden">
+        <input name="ownerID" type="number" value={{ownerID}} class="hidden">
+        <button type="submit">Change Owner</button>
+      </form>
+    </section>
+  </div>
+</body>
+
+</html>

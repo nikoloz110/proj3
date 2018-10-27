@@ -1,0 +1,33 @@
+{{> head}}
+
+<body>
+  <div id="errorContainer">
+    <span id="error">{{error}}</span>
+  </div>
+  <div id="wrapperIndex">
+    <form action="/person/info" method="POST">
+      <label>Name<input type="text" name="name"></label>
+      <label>Surname<input type="text" name="surname"></label><span id="or">OR</span>
+      <label>ID Number<input type="number" name="IDNumber"></label>
+      <input name="operation" type="text" value="searchPerson">
+      <button type="submit">Search Person</button>
+    </form>
+    <form action="/person/info" method="POST">
+      <label>Name<input type="text" name="name" placeholder="required" required></label>
+      <label>Surname<input type="text" name="surname" placeholder="required" required></label>
+      <label>Father's Name<input type="text" name="fathersName"></label>
+      <label>ID Number<input type="number" name="IDNumber" placeholder="required" required></label>
+      <label>Date of Birth<input type="date" name="dateOfBirth"></label>
+      <input name="operation" type="text" value="createPerson" class="hidden">
+      <button type="submit">Add Person</button>
+    </form>
+    <form action="/car/info" method="POST">
+      <label for="VIN">VIN<input type="number" name="VIN"></label><span id="or">OR</span>
+      <label for="licensePlateNumber">Plate Number<input type="text" name="licensePlateNumber"></label>
+      <input type="text" name="operation" value="searchCar">
+      <button type="submit">Search Car</button>
+    </form>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+{{> head}}
+
+<body>
+  <a href="/" id="home">&larr; Back</a>
+  <div id="errorContainer">
+    <span id="error">{{error}}</span>
+  </div>
+  <div id="wrapperDisabled">
+    <section id="person">
+      <form action="" method="POST">
+        <label>Name<input type="text" name="name"></label>
+        <label>Surname<input type="text" name="surname"></label>
+        <span id="or">OR</span>
+        <label>ID Number<input type="number" name="IDNumber"></label>
+        <input type="text" name="operation" value="person">
+        <button type="submit">Disable/Enable Person</button>
+      </form>
+      <hr>
+      <h1>Disabled people</h1>
+      {{#each disabledPeople}}
+      <span>{{name}} {{surname}}</span><br>
+      {{/each}}
+    </section>
+    <section id="car">
+      <form action="" method="POST">
+        <label for="VIN">VIN<input type="number" name="VIN"></label>
+        <span id="or">OR</span>
+        <label for="licensePlateNumber">Plate Number<input type="text" name="licensePlateNumber"></label>
+        <input type="text" name="operation" value="car">
+        <button type="submit">Disable/Enable Car</button>
+      </form>
+      <hr>
+      <h1>Disabled Cars</h1>
+      {{#each disabledCars}}
+      <span>{{make}} {{model}}</span><br>
+      {{/each}}
+    </section>
+  </div>
+</body>
+
+</html>

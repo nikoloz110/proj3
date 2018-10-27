@@ -1,0 +1,105 @@
+@font-face {
+  font-family: gothamRounded;
+  src: url(fonts/GothamRounded-Medium.otf);
+}
+
+:root {
+  --azure: azure;
+  --green: #01796f;
+}
+
+input[name="operation"],
+.hidden {
+  display: none;
+}
+input {
+  font-size: 0.7em;
+}
+body {
+  margin-top: 0;
+  background-color: var(--azure);
+  font-family: gothamRounded, Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+}
+
+#wrapperIndex {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1280px;
+  margin: 30px auto;
+}
+
+#wrapperPersonInfo,
+#wrapperCarInfo,
+#wrapperDisabled {
+  display: flex;
+  justify-content: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+label {
+  display: inline-flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+section {
+  margin: 0 30px;
+}
+button {
+  background-color: var(--green);
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: gothamRounded, Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+#home {
+  background-color: var(--green);
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 5px;
+  margin-top: 0;
+  margin-left: 20px;
+  font-family: gothamRounded, Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+input {
+  border-radius: 4px;
+}
+
+#or {
+  position: relative;
+  left: 10px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.owner {
+  font-size: 1em;
+}
+
+#errorContainer {
+  display: block;
+  text-align: center;
+  color: red;
+  font-size: 1.4em;
+}
